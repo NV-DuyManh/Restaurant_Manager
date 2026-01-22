@@ -9,6 +9,7 @@ out.addEventListener("click", s => {
     menu.classList.toggle("menu");
 });
 
-
+const log = document.getElementById(log);
+log.classList("click")
 
 

@@ -40,6 +40,8 @@ body {
                 font-size: 25px;
             }
 
+            .tb {}
+
             button {
                 position: absolute;
                 display: flex;
@@ -136,26 +138,44 @@ body {
                 font-size: 25px;
             }
 
-            button {
+            .tb {
+                button {
 
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
-                width: 35px;
-                height: 35px;
-                background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
-                color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    width: 35px;
+                    height: 35px;
+                    background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+                    color: white;
+                }
+
             }
 
             .anh {
-                width: 35px;
-                height: 35px;
 
-                img {
+                position: relative;
+
+                .u {
                     border-radius: 50%;
+                    border: 1px solid orangered;
+                    img {
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                    }
                 }
 
+                .log {
+                    position: absolute;
+                    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+                    padding: 10px;
+                    white-space: nowrap;
+                    right: 0;
+                    top: 50px;
+                    z-index: 2;
+                }
 
             }
         }
@@ -175,9 +195,10 @@ body {
                 justify-content: center;
                 color: white;
             }
-            img{
-                 width: 150px;
-                 padding-bottom: 20px;
+
+            img {
+                width: 150px;
+                padding-bottom: 20px;
             }
         }
 
