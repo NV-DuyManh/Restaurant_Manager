@@ -9,7 +9,11 @@ out.addEventListener("click", s => {
     menu.classList.toggle("menu");
 });
 
-const log = document.getElementById(log);
-log.classList("click")
+const inter = document.getElementById("interface");
+inter.addEventListener("click", (s)=>{
+    s.preventDefault();
+    const log = document.querySelector(".log");
+    log.classList.toggle("d-none");
+})
 
 

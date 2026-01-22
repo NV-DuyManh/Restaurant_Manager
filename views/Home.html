@@ -65,21 +65,17 @@
                     <i class="fa-solid fa-envelope"></i>
                 </button>
             </div>
-            <div class="anh ">
+            <div id="interface" class="anh ">
                 <button class="u"><img src="../img/user.jpg" alt=""></button>
-                
-                <div id="log" class="log d-flex flex-nowrap gap-2 justify-content-center align-items-center ">
+
+                <div id="log" class="log d-flex d-none flex-nowrap gap-2 justify-content-center align-items-center ">
                     <button class="text-light bg-success p-1">LOG IN</button>
                     <button class="text-light bg-danger p-1">LOG OUT</button>
                 </div>
             </div>
         </div>
 
-        <!-- <div class="main-right pt-3">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBooking">
-                Launch demo modal
-            </button>
-        </div> -->
+
 
         <div class="container mt-3  p-2 order">
             <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-3">
@@ -103,19 +99,23 @@
                         <div class="card-body">
                             <p class="quantity">2</p>
                             <img src="../img/restaurant.png" alt="">
-                            <div class="nut d-flex justify-content-center gap-3" style="  white-space: nowrap;">
 
-                                <a href="#"
-                                    class="btn btn-primary text-dark bg-warning  d-flex align-items-center gap-2">
-                                    <i class="fa-solid fa-toolbox"></i>BOOKING</a>
+                            <div class="nut d-flex justify-content-center gap-3" style="white-space: nowrap;">
+
+                                <button type="button"
+                                    class="btn btn-primary text-dark bg-warning d-flex align-items-center gap-2"
+                                    data-bs-toggle="modal" data-bs-target="#modalBooking">
+                                    <i class="fa-solid fa-toolbox"></i> BOOKING
+                                </button>
+
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+    </div>
 
     </div>
 
@@ -124,15 +124,30 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel">
+                        <i class="fa-solid fa-utensils"></i>
+                        BOOKING FORM
+                    </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div class="mb-3">
+                        <label class="form-label fw-bold text-secondary ">
+                            <i class="fa-solid fa-user me-1 text-primary"></i>CUSTOMER NAME
+                        </label>
+                        <input type="text" class="form-control custom-input" placeholder="Customer Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold text-secondary small">
+                            <i class="fa-solid fa-users me-1 text-primary"></i> QUANTITY
+                        </label>
+                        <input type="text" class="form-control custom-input" placeholder="Quantity">
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                    <button type="button" class="btn btn-primary">SEND</button>
                 </div>
             </div>
         </div>
