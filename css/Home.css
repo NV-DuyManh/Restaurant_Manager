@@ -224,21 +224,24 @@ body {
 
         .food {
 
-            /* CSS cho phần Chọn Bàn */
             .chonBan {
                 position: relative;
                 border-radius: 30px;
-                padding: 5px 5px 5px 20px;
+                padding: 13px;
                 width: 100%;
 
                 button {
-                    padding: 8px 20px;
-                    border-radius: 25px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    padding: 8px 33px;
+                    border-radius: 30px;
                     background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
                     color: white;
                     border: none;
                     transition: 0.3s;
-                    white-space: nowrap;
+
 
                     &:hover {
                         background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
@@ -250,19 +253,19 @@ body {
 
             .search {
                 input {
-                    padding: 13px 120px 13px 20px;
+                    padding: 13px;
                     border-radius: 30px;
                     width: 100%;
                     border: 1px solid #ccc;
 
                 }
 
-                button.btn-submit {
+                button {
                     position: absolute;
                     right: 0;
                     top: 0;
                     bottom: 0;
-                    padding: 0 20px;
+                    padding: 8px 20px;
                     border-radius: 30px;
                     background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
                     color: white;
