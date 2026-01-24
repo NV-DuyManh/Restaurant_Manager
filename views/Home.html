@@ -19,35 +19,35 @@
 <body>
     <div class="left">
         <header>
-            <h1 class="item ">ZTK STORE</h1>
+            <h1 class="item  d-none">ZTK STORE</h1>
 
-            <i class="fa-solid fa-store item text-white d-none" style="font-size: 1.5rem;"></i>
+            <i class="fa-solid fa-store item text-white" style="font-size: 1.5rem;"></i>
             <button id="icon">
-                <i class="fa-solid fa-arrow-right-from-bracket item d-none"></i>
-                <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180 item "></i>
+                <i class="fa-solid fa-arrow-right-from-bracket item "></i>
+                <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180 item d-none "></i>
             </button>
         </header>
 
         <ul class="menu">
-            <li class="d-flex  align-items-center">
+            <li class="d-flex align-items-center itemm">
                 <i class="fa-solid fa-gauge"></i>
-                <p class="item ">DASHBOARD</p>
+                <p class="item d-none">DASHBOARD</p>
             </li>
-            <li class="d-flex  align-items-center">
+            <li class="d-flex  align-items-center itemm">
                 <i class="fa-solid fa-calendar-days"></i>
-                <p class="item ">RESERVATION</p>
+                <p class="item d-none ">RESERVATION</p>
             </li>
-            <li class="d-flex align-items-center">
+            <li class="d-flex align-items-center itemm">
                 <i class="fa-solid fa-utensils"></i>
-                <p class="item ">ORDER FOOD</p>
+                <p class="item d-none ">ORDER FOOD</p>
             </li>
-            <li class="d-flex align-items-center">
+            <li class="d-flex align-items-center itemm">
                 <i class="fa-solid fa-wallet"></i>
-                <p class="item ">BILLS</p>
+                <p class="item d-none">BILLS</p>
             </li>
-            <li class="d-flex  align-items-center">
+            <li class="d-flex  align-items-center itemm">
                 <i class="fa-solid fa-user"></i>
-                <p class="item ">INFORMATION</p>
+                <p class="item d-none">INFORMATION</p>
             </li>
 
         </ul>
@@ -74,47 +74,30 @@
                 </div>
             </div>
         </div>
-
-
-
-        <div class="container mt-3  p-2 order">
-            <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-3">
-                <div class="col">
-                    <div class="card text-center xe">
-                        <div class="card-body">
-                            <p class="quantity">1</p>
-                            <img src="../img/nhahang_nguoi.png" alt="">
-                            <div class="nut d-flex justify-content-center gap-3" style="  white-space: nowrap;">
-                                <a href="#" class="btn btn-primary text-light bg-success">
-                                    <i class="fa-solid fa-circle-plus"></i> ADD</a>
-                                <a href="#" class="btn btn-primary text-light bg-danger">
-                                    <i class="fa-solid fa-cart-plus"></i> CART</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card text-center xe">
-                        <div class="card-body">
-                            <p class="quantity">2</p>
-                            <img src="../img/restaurant.png" alt="">
-
-                            <div class="nut d-flex justify-content-center gap-3" style="white-space: nowrap;">
-
-                                <button type="button"
-                                    class="btn btn-primary text-dark bg-warning d-flex align-items-center gap-2"
-                                    data-bs-toggle="modal" data-bs-target="#modalBooking">
-                                    <i class="fa-solid fa-toolbox"></i> BOOKING
-                                </button>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="box">Dashboard</div>
+        <div class="box">
+            <div class="container mt-3  p-2 order">
+                <div class="row row-cols-xl-4  row-cols-lg-3 row-cols-md-2 row-cols-1 g-3 table"></div>
             </div>
         </div>
+        <div class="boxx">
+            <div class="container mt-3 d-flex food">
+                <div class="chonBan d-flex flex-wrap justify-content-center align-items-center">
+                    <p class="bg-light text-dark   ">
+                        <i class="fa-solid fa-book-journal-whills"></i> Choose a table
+                    </p>
+                    <button>
+                        <i class="fa-solid fa-cart-shopping"></i> Order</button>
+                    </select>
+                </div>
+                <div class="search">
+<input type="text" placeholder="Search">
+                </div>
 
+            </div>
+        </div>
+        <div class="box">paybill</div>
+        <div class="box">info</div>
     </div>
 
     </div>
@@ -135,23 +118,26 @@
                         <label class="form-label fw-bold text-secondary ">
                             <i class="fa-solid fa-user me-1 text-primary"></i>CUSTOMER NAME
                         </label>
-                        <input type="text" class="form-control custom-input" placeholder="Customer Name">
+                        <input id="customer_name" type="text" class="form-control custom-input"
+                            placeholder="Customer Name">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label fw-bold text-secondary small">
                             <i class="fa-solid fa-users me-1 text-primary"></i> QUANTITY
                         </label>
-                        <input type="text" class="form-control custom-input" placeholder="Quantity">
+                        <input id="quantity" type="number" class="form-control custom-input" placeholder="Quantity">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
-                    <button type="button" class="btn btn-primary">SEND</button>
+                    <button id="send" type="button" class="btn btn-primary">SEND</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/getTable.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
