@@ -2,9 +2,9 @@
   "tables": [
     {
       "id": "1",
-      "nameCustomer": "",
-      "quantity": 0,
-      "status": true
+      "nameCustomer": "fghn",
+      "quantity": "34",
+      "status": false
     },
     {
       "id": "2",
