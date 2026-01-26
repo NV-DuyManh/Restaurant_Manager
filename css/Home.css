@@ -231,8 +231,13 @@ body {
             .chonBan {
                 position: relative;
                 border-radius: 30px;
-                padding: 13px;
                 width: 100%;
+
+                select {
+                    border-radius: 30px;
+                    padding: 13px;
+                    width: 100%;
+                }
 
                 button {
                     position: absolute;
