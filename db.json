@@ -90,8 +90,8 @@
     },
     {
       "id": "3",
-      "name": "Pate",
-      "imgUrl": "../img/pate.png",
+      "name": "Beef",
+      "imgUrl": "../img/beef.png",
       "price": 6,
       "quantity": 45
     },
@@ -104,7 +104,7 @@
     },
     {
       "id": "5",
-      "name": "Chicken",
+      "name": "Pork",
       "imgUrl": "../img/chicken.png",
       "price": 40,
       "quantity": 2

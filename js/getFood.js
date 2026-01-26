@@ -5,8 +5,8 @@ async function getFoods() {
         listFood.innerHTML += `  <div class="col">
                         <div class="card ">
                             <div class="monAn ">
-                                <p>${s.id}</p>
-                                <h5 class="card-title text-center">${s.name}</h5>
+                                <p id ="doimau">${s.id}</p>
+                                <h5  class="card-title text-center">${s.name}</h5>
                                 <div class="icon">
                                     <button> <i class="fa-solid fa-pen-to-square fs-5"></i></button>
                                     <button><i class="fa-solid fa-trash fs-5"></i></button>
