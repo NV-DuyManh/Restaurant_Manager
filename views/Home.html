@@ -174,12 +174,12 @@
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="margin: 0px 30px;">
                     <div class="mb-3">
                         <label class="form-label fw-bold text-secondary ">
                             <i class="fa-solid fa-user me-1 text-primary"></i>NAME
                         </label>
-                        <input id="customer_name" type="text" class="form-control custom-input"
+                        <input id="food_name" type="text" class="form-control custom-input"
                             placeholder="Customer Name">
                     </div>
 
@@ -187,7 +187,14 @@
                         <label class="form-label fw-bold text-secondary small">
                             <i class="fa-solid fa-money-bill-1-wave text-warning"></i> PRICE
                         </label>
-                        <input id="quantity" type="number" class="form-control custom-input" placeholder="Quantity">
+                        <input id="price" type="number" class="form-control custom-input" placeholder="Quantity">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold text-secondary small"> IMAGE </label>
+                        <input type="file" id="chooseImage"class="form-control custom-input" placeholder="Quantity">                        
+                    </div>
+                    <div class="anh">
+                        <img src="../img/logo.jpg" style="height: 250px" alt="">
                     </div>
                 </div>
                 <div class="modal-footer">
