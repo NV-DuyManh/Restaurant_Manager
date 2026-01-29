@@ -102,59 +102,25 @@ button {
 
         input {
             border: 1px solid green;
-            transition: all 0.3s ease;
-
-            &:focus {
-                border-color: #00e3ae;
-                box-shadow: 0 0 8px rgba(0, 227, 174, 0.4);
-            }
         }
 
-        .input-group {
-            transition: all 0.3s ease;
+        .input-group input[type="password"],
+        .input-group input[type="text"] {
+            border-right: none;
+            border: 1px solid green;
+            border-right: none;
+        }
 
-            input {
-                border: 1px solid green;
-                border-right: none;
-                transition: all 0.3s ease;
+        .input-group .input-group-text {
+            background-color: white;
+            border: 1px solid green;
+            border-left: none;
+            color: #666;
+        }
 
-                &:focus {
-                    box-shadow: none;
-                    border-color: green;
-                }
-            }
-
-            .input-group-text {
-                background-color: white;
-                border: 1px solid green;
-                border-left: none;
-                color: #999;
-                transition: all 0.3s ease;
-
-                cursor: pointer;
-
-                i {
-                    transition: transform 0.2s;
-                }
-
-                &:hover i {
-                    color: #00e3ae;
-                    transform: scale(1.2);
-                }
-            }
-
-            &:focus-within {
-
-                input,
-                .input-group-text {
-                    border-color: #00e3ae;
-                    box-shadow: 0 0 10px rgba(0, 227, 174, 0.3);
-                }
-
-                .input-group-text {
-                    color: #00e3ae;
-                }
-            }
+        .input-group:focus-within {
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+            border-radius: 50px;
         }
     }
 }
