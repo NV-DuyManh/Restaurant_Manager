@@ -11,8 +11,8 @@ async function getFoods() {
                                 <p class="doimau">${s.id}</p>
                                 <h5  class="card-title text-center">${s.name}</h5>
                                 <div class="icon">
-                                    <button> <i class="fa-solid fa-pen-to-square fs-5"></i></button>
-                                    <button><i class="fa-solid fa-trash fs-5"></i></button>
+                                    <button> <i class="fa-solid fa-pen-to-square fs-5" ></i></button>
+                                    <button><i class="fa-solid fa-trash fs-5" id="delete" data-bs-toggle="modal" data-bs-target="#modaldelete" ></i></button>
                                 </div>
 
                             </div>
