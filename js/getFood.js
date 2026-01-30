@@ -1,4 +1,4 @@
-
+// lay all food
 async function getFoods() {
     const data = await getData(URL_FOOD);
     const listFood = document.querySelector(".food");
@@ -11,7 +11,7 @@ async function getFoods() {
                                 <p class="doimau">${s.id}</p>
                                 <h5  class="card-title text-center">${s.name}</h5>
                                 <div class="icon">
-                                    <button> <i class="fa-solid fa-pen-to-square fs-5" ></i></button>
+                                    <button onClick=getIdFood(${s.id})> <i class="fa-solid fa-pen-to-square fs-5"  data-bs-toggle="modal" data-bs-target="#modalAddCart"></i></button>
                                     <button><i class="fa-solid fa-trash fs-5" id="delete" data-bs-toggle="modal" data-bs-target="#modaldelete" ></i></button>
                                 </div>
 
@@ -45,9 +45,7 @@ async function getFoods() {
 }
 getFoods();
 
-// async function getFoods() {
-//     const data = await getData(URL_ORDER);
-// }
+// dat mon
 const order = document.getElementById("order");
 order.addEventListener("click", async () => {
     const dataAOrder = await getData(URL_ORDER);
@@ -91,5 +89,63 @@ order.addEventListener("click", async () => {
         add(URL_ORDER, newOrder);
     }
 
-})
+});
 
+let selectedFoodImageFile; // toan cuc
+const chonImg = document.getElementById("chooseImage");
+chonImg.addEventListener("change", handleFoodImageSelect)
+
+const addFood = document.getElementById("upFood");
+addFood.addEventListener("click", async () => {
+    const foodName = document.getElementById("foodName");
+    const price = document.getElementById("price");
+    if (!foodName.value || !price.value) {
+        alert("vui long nhap du thong tin");
+        return;
+    }
+    if (!selectedFoodImageFile) {
+        alert("vui long chon anh");
+        return;
+    }
+    addFood.disabled = true;
+    addFood.style.background = "gray";
+    const icon = document.querySelector(".fa-spinner");
+    icon.style.transition = "all 5s ease-in";
+    icon.style.transform = "rotate(720deg)";
+
+    const imgUrl = await uploadImageToCloudinary(selectedFoodImageFile);
+    const newFood = {
+        name: foodName.value,
+        imgUrl: imgUrl,
+        price: parseInt(price.value)
+    }
+
+    add(URL_FOOD, newFood);
+
+});
+// Xử lý khi người dùng chọn file ảnh
+function handleFoodImageSelect(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+
+    // Sau khi đọc xong ảnh, hiển thị preview lên giao diện
+    reader.onload = (e) => {
+        document.getElementById("img_food").src = e.target.result;
+    };
+
+    selectedFoodImageFile = file; // Lưu lại file để upload sau
+}
+async function getIdFood(id) {
+    const data = await getData(URL_FOOD);
+    // find kiem ve mon an food 
+    const food = data.find(s => s.id == id);
+    const foodName = document.getElementById("foodName");
+    foodName.value = food.name;
+    const price = document.getElementById("price");
+    price.value = food.price;
+    const img = document.getElementById("img_food");
+    img.src = food.imgUrl;
+}

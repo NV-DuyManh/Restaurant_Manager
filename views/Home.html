@@ -106,7 +106,7 @@
                     <div class="col-12 col-md-4 col-lg-2 order-md-2 order-lg-3">
                         <div class="add ">
                             <button class="fw-bold  d-flex justify-content-center align-items-center gap-2"
-                                data-bs-toggle="modal" data-bs-target="#modalAddCart">
+                                data-bs-toggle="modal" data-bs-target="#modalAddCart" id="addFood">
                                 <i class="fa-solid fa-plus fs-6" style="font-size: 12px;"></i>
                                 Add Food
                             </button>
@@ -179,26 +179,26 @@
                         <label class="form-label fw-bold text-secondary ">
                             <i class="fa-solid fa-user me-1 text-primary"></i>NAME
                         </label>
-                        <input id="food_name" type="text" class="form-control custom-input" placeholder="Customer Name">
+                        <input id="foodName" type="text" class="form-control custom-input" placeholder="Dish Name">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label fw-bold text-secondary small">
                             <i class="fa-solid fa-money-bill-1-wave text-warning"></i> PRICE
                         </label>
-                        <input id="price" type="number" class="form-control custom-input" placeholder="Quantity">
+                        <input id="price" type="number" class="form-control custom-input" placeholder="Enter Price">
                     </div>
                     <div class="mb-3">
                         <label class="form-label fw-bold text-secondary small"> IMAGE </label>
-                        <input type="file" id="chooseImage" class="form-control custom-input" placeholder="Quantity">
+                        <input type="file" id="chooseImage" class="form-control custom-input" >
                     </div>
                     <div class="anh">
-                        <img src="../img/logo.jpg" style="height: 250px" alt="">
+                        <img id="img_food" src="../img/logo.jpg" style="height: 250px" alt="">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
-                    <button id="send" type="button" class="btn btn-primary">UPLOAD</button>
+                    <button  id="upFood" type="button" class="btn btn-primary">ADD FOOD <i class="fa-solid fa-spinner"></i></button>
                 </div>
             </div>
         </div>
@@ -268,6 +268,7 @@
         </div>
     </div>
     <script src="../js/api.js"></script>
+    <script src="../js/configCloundianary.js"></script>
     <script src="../js/getTable.js"></script>
     <script src="../js/getFood.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
