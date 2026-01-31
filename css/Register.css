@@ -19,11 +19,12 @@ a {
 
 body {
     background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin: auto;
 
     &:hover {
         background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
