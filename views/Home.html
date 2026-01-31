@@ -170,7 +170,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title fw-bold" id="exampleModalLabel">
                         <i class="fa-solid fa-utensils"></i>
-                        ADD FOOD
+                        <span id="titleFood">ADD FOOD</span>
                     </h5>
                     <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -190,7 +190,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label fw-bold text-secondary small"> IMAGE </label>
-                        <input type="file" id="chooseImage" class="form-control custom-input" >
+                        <input type="file" id="chooseImage" class="form-control custom-input">
                     </div>
                     <div class="anh">
                         <img id="img_food" src="../img/logo.jpg" style="height: 250px" alt="">
@@ -198,7 +198,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
-                    <button  id="upFood" type="button" class="btn btn-primary">ADD FOOD <i class="fa-solid fa-spinner"></i></button>
+                    <button id="upFood" type="button" class="btn btn-primary"> <span id="ftitte">ADD FOOD</span> <i
+                            class="fa-solid fa-spinner"></i></button>
                 </div>
             </div>
         </div>
@@ -219,7 +220,7 @@
                 </div>
                 <div class="modal-footer align-items-center d-flex justify-content-center gap-5">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
-                    <button id="send" type="button" class="btn btn-danger">DELETE</button>
+                    <button id="deleteFood" type="button" class="btn btn-danger">DELETE</button>
                 </div>
             </div>
         </div>

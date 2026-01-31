@@ -12,7 +12,7 @@ async function getFoods() {
                                 <h5  class="card-title text-center">${s.name}</h5>
                                 <div class="icon">
                                     <button onClick=getIdFood(${s.id})> <i class="fa-solid fa-pen-to-square fs-5"  data-bs-toggle="modal" data-bs-target="#modalAddCart"></i></button>
-                                    <button><i class="fa-solid fa-trash fs-5" id="delete" data-bs-toggle="modal" data-bs-target="#modaldelete" ></i></button>
+                                    <button onClick=xoafood(${s.id})><i class="fa-solid fa-trash fs-5" id="delete" data-bs-toggle="modal" data-bs-target="#modaldelete" ></i></button>
                                 </div>
 
                             </div>
@@ -92,11 +92,13 @@ order.addEventListener("click", async () => {
 });
 
 let selectedFoodImageFile; // toan cuc
+let idEdit;
 const chonImg = document.getElementById("chooseImage");
 chonImg.addEventListener("change", handleFoodImageSelect)
 
 const addFood = document.getElementById("upFood");
 addFood.addEventListener("click", async () => {
+    const data = await getData(URL_FOOD);
     const foodName = document.getElementById("foodName");
     const price = document.getElementById("price");
     if (!foodName.value || !price.value) {
@@ -107,6 +109,15 @@ addFood.addEventListener("click", async () => {
         alert("vui long chon anh");
         return;
     }
+    let id = 1;
+    data.forEach(s => {
+        if (id == s.id) {
+            id++;
+        } else {
+            return;
+        }
+    });
+
     addFood.disabled = true;
     addFood.style.background = "gray";
     const icon = document.querySelector(".fa-spinner");
@@ -115,13 +126,16 @@ addFood.addEventListener("click", async () => {
 
     const imgUrl = await uploadImageToCloudinary(selectedFoodImageFile);
     const newFood = {
+        id: idEdit ? idEdit : id,
         name: foodName.value,
         imgUrl: imgUrl,
         price: parseInt(price.value)
     }
-
-    add(URL_FOOD, newFood);
-
+    if (idEdit) {
+        editById(URL_FOOD, newFood)
+    } else {
+        add(URL_FOOD, newFood);
+    }
 });
 // Xử lý khi người dùng chọn file ảnh
 function handleFoodImageSelect(event) {
@@ -139,6 +153,7 @@ function handleFoodImageSelect(event) {
     selectedFoodImageFile = file; // Lưu lại file để upload sau
 }
 async function getIdFood(id) {
+    idEdit = id;
     const data = await getData(URL_FOOD);
     // find kiem ve mon an food 
     const food = data.find(s => s.id == id);
@@ -148,4 +163,29 @@ async function getIdFood(id) {
     price.value = food.price;
     const img = document.getElementById("img_food");
     img.src = food.imgUrl;
+    const updateFood = document.getElementById("titleFood");
+    updateFood.innerText = "UPDATE FOOD";
+    const upFood = document.getElementById("ftitte");
+    upFood.innerText = "UPDATE FOOD";
+}
+
+const addfood = document.getElementById("addFood");
+addfood.addEventListener("click", () => {
+    const foodName = document.getElementById("foodName");
+    foodName.value = "";
+    const price = document.getElementById("price");
+    price.value = "";
+    const img = document.getElementById("img_food");
+    img.src = "../img/logo.jpg";
+    const updateFood = document.getElementById("titleFood");
+    updateFood.innerText = "ADD FOOD";
+    const upFood = document.getElementById("ftitte");
+    upFood.innerText = "ADD FOOD";
+});
+async function xoafood(id){
+    // console.log(id);
+const deleteFood = document.getElementById("deleteFood");
+deleteFood.addEventListener("click", ()=>{
+    deleted(URL_FOOD, id) ;
+})
 }
