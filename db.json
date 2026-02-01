@@ -2,9 +2,9 @@
   "tables": [
     {
       "id": "1",
-      "nameCustomer": "fghn",
-      "quantity": "34",
-      "status": false
+      "nameCustomer": "",
+      "quantity": "0",
+      "status": true
     },
     {
       "id": "2",
@@ -74,6 +74,12 @@
     }
   ],
   "foods": [
+    {
+      "id": "1",
+      "name": "Soup",
+      "imgUrl": "../img/bread-soup.png",
+      "price": 45
+    },
     {
       "id": "2",
       "name": "Potato",
