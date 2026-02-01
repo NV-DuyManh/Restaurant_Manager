@@ -412,7 +412,7 @@ body {
                 }
 
                 input {
-                    width: 100px;
+                    width:60px;
                     padding: 10px 5px;
                     border-radius: 10px;
                     border: 1px solid gray;
