@@ -147,10 +147,16 @@
       "price": 354
     },
     {
-      "id": 13,
-      "name": "dfgbn",
-      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1769748235/x9cgqaa7dcodm3uxjziv.png",
-      "price": 45
+      "id": 14,
+      "name": "bdfbdfb",
+      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1769964241/add7nkjio8suok9m2tsj.png",
+      "price": 445
+    },
+    {
+      "id": 15,
+      "name": "CANH TOM",
+      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1769965258/b71ubdrev24wvogmlzps.png",
+      "price": 67
     }
   ],
   "orders": []

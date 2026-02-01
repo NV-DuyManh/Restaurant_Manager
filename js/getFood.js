@@ -1,7 +1,8 @@
-// lay all food
 async function getFoods() {
     const data = await getData(URL_FOOD);
     const listFood = document.querySelector(".food");
+    listFood.innerHTML = "";
+    
     data.forEach(s => {
         const item = document.createElement("div");
         item.classList.add("col");
@@ -11,8 +12,8 @@ async function getFoods() {
                                 <p class="doimau">${s.id}</p>
                                 <h5  class="card-title text-center">${s.name}</h5>
                                 <div class="icon">
-                                    <button onClick=getIdFood(${s.id})> <i class="fa-solid fa-pen-to-square fs-5"  data-bs-toggle="modal" data-bs-target="#modalAddCart"></i></button>
-                                    <button onClick=xoafood(${s.id})><i class="fa-solid fa-trash fs-5" id="delete" data-bs-toggle="modal" data-bs-target="#modaldelete" ></i></button>
+                                    <button onClick="getIdFood('${s.id}')"> <i class="fa-solid fa-pen-to-square fs-5"  data-bs-toggle="modal" data-bs-target="#modalAddCart"></i></button>
+                                    <button onClick="xoafood('${s.id}')"><i class="fa-solid fa-trash fs-5" id="delete" data-bs-toggle="modal" data-bs-target="#modaldelete" ></i></button>
                                 </div>
 
                             </div>
@@ -39,13 +40,10 @@ async function getFoods() {
             const slHienTai = parseInt(soLuong.value) || 0;
             soLuong.value = slHienTai + 1;
         })
-
-
     });
 }
 getFoods();
 
-// dat mon
 const order = document.getElementById("order");
 order.addEventListener("click", async () => {
     const dataAOrder = await getData(URL_ORDER);
@@ -88,15 +86,16 @@ order.addEventListener("click", async () => {
     } else {
         add(URL_ORDER, newOrder);
     }
-
 });
 
-let selectedFoodImageFile; // toan cuc
+let selectedFoodImageFile; 
 let idEdit;
 const chonImg = document.getElementById("chooseImage");
 chonImg.addEventListener("change", handleFoodImageSelect)
 
 const addFood = document.getElementById("upFood");
+const loadingOverlay = document.getElementById("loading-overlay");
+
 addFood.addEventListener("click", async () => {
     const data = await getData(URL_FOOD);
     const foodName = document.getElementById("foodName");
@@ -105,57 +104,75 @@ addFood.addEventListener("click", async () => {
         alert("vui long nhap du thong tin");
         return;
     }
-    if (!selectedFoodImageFile) {
+    if (!selectedFoodImageFile && !idEdit) { 
         alert("vui long chon anh");
         return;
     }
-    let id = 1;
-    data.forEach(s => {
-        if (id == s.id) {
-            id++;
-        } else {
-            return;
-        }
-    });
 
+    loadingOverlay.classList.add("active");
     addFood.disabled = true;
     addFood.style.background = "gray";
     const icon = document.querySelector(".fa-spinner");
-    icon.style.transition = "all 5s ease-in";
-    icon.style.transform = "rotate(720deg)";
-
-    const imgUrl = await uploadImageToCloudinary(selectedFoodImageFile);
-    const newFood = {
-        id: idEdit ? idEdit : id,
-        name: foodName.value,
-        imgUrl: imgUrl,
-        price: parseInt(price.value)
+    if(icon) {
+        icon.style.transition = "all 5s ease-in";
+        icon.style.transform = "rotate(720deg)";
     }
-    if (idEdit) {
-        editById(URL_FOOD, newFood)
-    } else {
-        add(URL_FOOD, newFood);
+
+    try {
+        let maxId = 0;
+        if(data.length > 0) {
+            maxId = Math.max(...data.map(item => Number(item.id))); 
+        }
+        let id = maxId + 1;
+
+        let imgUrl = "";
+        if(selectedFoodImageFile){
+             imgUrl = await uploadImageToCloudinary(selectedFoodImageFile);
+        } else if (idEdit) {
+             const current = data.find(s => s.id == idEdit);
+             imgUrl = current.imgUrl;
+        }
+
+        const newFood = {
+            id: idEdit ? idEdit : id,
+            name: foodName.value,
+            imgUrl: imgUrl,
+            price: parseInt(price.value)
+        }
+        if (idEdit) {
+            await editById(URL_FOOD, newFood)
+        } else {
+            await add(URL_FOOD, newFood);
+        }
+        
+        await getFoods(); 
+
+    } catch (error) {
+        console.error(error);
+        alert("Có lỗi xảy ra");
+    } finally {
+        loadingOverlay.classList.remove("active");
+        addFood.disabled = false;
+        addFood.style.background = "";
+        selectedFoodImageFile = null;
+        idEdit = null;
     }
 });
-// Xử lý khi người dùng chọn file ảnh
+
 function handleFoodImageSelect(event) {
     const file = event.target.files[0];
     if (!file) return;
-
     const reader = new FileReader();
     reader.readAsDataURL(file);
-
-    // Sau khi đọc xong ảnh, hiển thị preview lên giao diện
     reader.onload = (e) => {
         document.getElementById("img_food").src = e.target.result;
     };
-
-    selectedFoodImageFile = file; // Lưu lại file để upload sau
+    selectedFoodImageFile = file; 
 }
+
 async function getIdFood(id) {
     idEdit = id;
     const data = await getData(URL_FOOD);
-    // find kiem ve mon an food 
     const food = data.find(s => s.id == id);
     const foodName = document.getElementById("foodName");
     foodName.value = food.name;
@@ -182,10 +199,11 @@ addfood.addEventListener("click", () => {
     const upFood = document.getElementById("ftitte");
     upFood.innerText = "ADD FOOD";
 });
-async function xoafood(id){
-    // console.log(id);
-const deleteFood = document.getElementById("deleteFood");
-deleteFood.addEventListener("click", ()=>{
-    deleted(URL_FOOD, id) ;
-})
+
+async function xoafood(id) {
+    const deleteFood = document.getElementById("deleteFood");
+    deleteFood.onclick = async function() {
+        await deleted(URL_FOOD, id);
+        await getFoods();
+    }
 }

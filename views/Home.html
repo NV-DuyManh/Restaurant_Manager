@@ -75,12 +75,14 @@
             </div>
         </div>
         <div class="box">Dashboard</div>
-        <div class="box">
+
+        <div class="box dat_ban">
             <div class="container mt-3  p-2 order">
                 <div class="row row-cols-xl-4  row-cols-lg-3 row-cols-md-2 row-cols-1 g-3 table"></div>
             </div>
         </div>
-        <div class="box p-3">
+
+        <div class="box p-3 order_food">
             <div class="container choose mt-2">
                 <div class="row g-3 align-items-center">
                     <div class="col-12 col-md-8 col-lg-4 order-md-1 order-lg-1">
@@ -120,12 +122,85 @@
                 </div>
             </div>
         </div>
-        <div class="box">paybill</div>
-        <div class="box">
+
+        <div class="box bills container">
+            <h1 class="mt-5">The invoice has been paid</h1>
+            <div class="row row-cols-md-2 row-cols-1 g-3 mt-1">
+                <div class="col mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Table number: 1</h3>
+                        </div>
+                        <div class="card-body" style="padding: 10px 50px;">
+                            <p>Chicken x 2 = 240 USD</p>
+                            <p>Fish x 3 = 123 USD</p>
+                        </div>
+                        <div class="card-footer">
+                            <h5 class="text-end" style="padding: 0px 30px;">Total: 363 USD </h5>
+                            <p class="text-end" style=" color: gray; font-style:italic;">Payment made
+                                on
+                                1/2/2026, 7:57:33 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Table number: 1</h3>
+                        </div>
+                        <div class="card-body" style="padding: 10px 50px;">
+                            <p>Chicken x 2 = 240 USD</p>
+                            <p>Fish x 3 = 123 USD</p>
+                        </div>
+                        <div class="card-footer">
+                            <h5 class="text-end" style="padding: 0px 30px;">Total: 363 USD </h5>
+                            <p class="text-end" style=" color: gray; font-style:italic;">Payment made
+                                on
+                                1/2/2026, 7:57:33 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Table number: 1</h3>
+                        </div>
+                        <div class="card-body" style="padding: 10px 50px;">
+                            <p>Chicken x 2 = 240 USD</p>
+                            <p>Fish x 3 = 123 USD</p>
+                        </div>
+                        <div class="card-footer">
+                            <h5 class="text-end" style="padding: 0px 30px;">Total: 363 USD </h5>
+                            <p class="text-end" style=" color: gray; font-style:italic;">Payment made
+                                on
+                                1/2/2026, 7:57:33 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Table number: 1</h3>
+                        </div>
+                        <div class="card-body" style="padding: 10px 50px;">
+                            <p>Chicken x 2 = 240 USD</p>
+                            <p>Fish x 3 = 123 USD</p>
+                        </div>
+                        <div class="card-footer">
+                            <h5 class="text-end" style="padding: 0px 30px;">Total: 363 USD </h5>
+                            <p class="text-end" style=" color: gray; font-style:italic;">Payment made
+                                on
+                                1/2/2026, 7:57:33 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box information">
             <div class="container infor">
-                <!-- <div class="row row-cols-1 row-cols-md-2 in4 justify-content-center"></div> -->
                 <div class="row in4 justify-content-center">
-                    <div class="col-md-4 col-12 bg-white p-3 infor-left">
+                    <div class="col-md-4 col-12 p-3 infor-left">
                         <div class="anhUser">
                             <img src="../img/user.png" alt="">
                         </div>
@@ -135,7 +210,7 @@
                     </div>
 
                     <div class="col-md-8 col-12 p-3 flex-column text-light infor-right">
-                        <h2 class="m-0">INFORMATION</h2>
+                        <h2 class="m-0">Information</h2>
                         <hr>
                         <div class="inforBasic d-flex justify-content-between">
                             <div class="email">
@@ -153,13 +228,13 @@
                                 <p>123 ABC street, QWS city</p>
                             </div>
                             <div class="birth">
-                                <h3>Birth</h3>
+                                <h3>Birthday</h3>
                                 <p>20-09-2005</p>
                             </div>
                         </div>
 
                         <hr>
-                        <h3>Follow me</h3>
+                        <h3>Follow Me</h3>
                         <div class="icon d-flex gap-2">
                             <i class="fa-brands fa-facebook"></i>
                             <i class="fa-brands fa-square-instagram"></i>
@@ -243,13 +318,19 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
-                    <button id="upFood" type="button" class="btn btn-primary"> <span id="ftitte">ADD FOOD</span> <i
-                            class="fa-solid fa-spinner"></i></button>
+                    <button id="upFood" type="button" class="btn btn-primary">
+                        <span id="ftitte">ADD FOOD</span>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 
+    <div id="loading-overlay">
+        <div class="spinner-container">
+            <i class="fa-solid fa-spinner"></i>
+        </div>
+    </div>
     <!-- Modal xoa san pham -->
     <div class="modal fade" id="modaldelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -270,6 +351,7 @@
             </div>
         </div>
     </div>
+
     <!-- Modal Bill -->
     <div class="modal fade" id="modalbill" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -313,6 +395,7 @@
             </div>
         </div>
     </div>
+
     <script src="../js/api.js"></script>
     <script src="../js/configCloundianary.js"></script>
     <script src="../js/getTable.js"></script>

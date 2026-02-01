@@ -412,7 +412,7 @@ body {
                 }
 
                 input {
-                    width:60px;
+                    width: 60px;
                     padding: 10px 5px;
                     border-radius: 10px;
                     border: 1px solid gray;
@@ -427,6 +427,25 @@ body {
 
                     -moz-appearance: textfield;
                 }
+            }
+        }
+
+        .bills {
+            .card {
+                box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            }
+
+            .card-header {
+                background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+                color: white;
+            }
+
+            .card-body {
+                background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+            }
+
+            .card-footer {
+                background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
             }
         }
 
@@ -449,45 +468,99 @@ body {
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                padding: 0px 20px;
+                padding: 20px;
+
+                transition: all 0.4s ease;
 
                 .anhUser {
+                    position: relative;
                     width: 120px;
                     height: 120px;
                     margin-bottom: 20px;
-                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: -15px;
+                        left: -15px;
+                        right: -15px;
+                        bottom: -15px;
+
+                        background-color: #ff4d4d;
+                        z-index: 0;
+
+                        border-radius: 50%;
+                        clip-path: polygon(0% 0%, 50% 0%, 100% 0%,
+                                100% 50%, 100% 100%, 50% 100%,
+                                0% 100%, 0% 50%, 0% 0%, 0% 0%);
+
+                        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+                        transform: rotate(720deg);
+                    }
 
                     img {
+                        position: relative;
+                        z-index: 1;
+                        width: 100%;
+                        height: 100%;
                         border-radius: 50%;
-                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                        border: 1px solid white;
-                        background-color: red;
+                        object-fit: cover;
+
+                        transition: none;
                     }
                 }
-
 
                 p {
                     margin-top: 5px;
                     color: #777;
                     font-size: 0.9rem;
+                    transition: color 0.3s;
+                    font-size: 1.1rem;
                 }
 
                 button {
                     margin-top: 20px;
-                    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
                     color: white;
                     padding: 8px 5px;
                     border: none;
                     border-radius: 50px;
                     width: 100px;
+                    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+                    color: white;
 
                     i {
                         margin-right: 8px;
                     }
 
                     &:hover {
-                        background-image: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
+
+                        background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+                        color: red;
+                    }
+                }
+
+                &:hover {
+                    background-color: #d63031;
+
+                    h2 {
+                        color: greenyellow;
+                    }
+
+                    p {
                         color: white;
+
+                    }
+
+                    .anhUser::before {
+                        background-color: #f1c40f;
+                        border-radius: 0;
+                        transform: rotate(360deg) scale(1.2);
+                        clip-path: polygon(50% 0%, 61% 35%, 98% 35%,
+                                68% 57%, 79% 91%, 50% 70%,
+                                21% 91%, 32% 57%, 2% 35%, 39% 35%);
                     }
                 }
             }
@@ -522,7 +595,6 @@ body {
 
                     h3 {
                         font-size: 1.1rem;
-                        text-transform: uppercase;
 
                         margin-bottom: 5px;
                     }
@@ -561,6 +633,62 @@ body {
 
 }
 
+/* Loading Overlay Full Screen */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Màu nền đen mờ */
+    background: rgba(0, 0, 0, 0.6);
+    /* Hiệu ứng làm mờ hậu cảnh (Glassmorphism) */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 9999;
+    /* Đảm bảo nằm trên cùng, đè lên cả Modal */
+
+    /* Căn giữa spinner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Mặc định ẩn đi */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    /* Khi có class active thì hiện lên */
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .spinner-container {
+        i {
+            font-size: 60px;
+            /* Kích thước lớn */
+            /* Màu Gradient cho đẹp */
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            /* Hiệu ứng xoay vô tận */
+            animation: spinLoading 1s linear infinite;
+        }
+    }
+}
+
+/* Keyframes cho hiệu ứng xoay */
+@keyframes spinLoading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /* laptop */
 @media screen and (min-width: 741px) {
