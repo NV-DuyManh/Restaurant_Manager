@@ -423,8 +423,150 @@ body {
             }
         }
 
+        .infor {     
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 10px;
+
+            h1 {
+                font-size: 50px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            button {
+                background-image: linear-gradient(to top, #9be15d 0%, #00e3ae 100%);
+                color: red;
+                font-weight: bold;
+                border: none;
+
+                &:hover {
+                    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+                    color: yellow;
+                }
+            }
+
+            .in4 {
+                width: 90%;
+                margin: auto;
+                border-radius: 30px;
+                overflow: hidden;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+                .dangNhap {
+                    margin-top: 45px;
+
+                    i {
+                        font-size: 35px;
+                    }
+                }
+
+                .social {
+                    margin-top: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+
+                    i {
+                        background-image: linear-gradient(-225deg, #B6CEE8 0%, #F578DC 100%);
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: blue;
+                        font-size: 20px;
+                        border: 1px solid black;
+
+                        &:hover {
+                            background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+                            width: 40px;
+                            color: white;
+                            border: none;
+                        }
+                    }
+                }
+
+                .login-input {
+                    margin: 0px 30px;
+
+                    input {
+                        border: 1px solid green;
+                        transition: all 0.3s ease;
+
+                        &:focus {
+                            border-color: #00e3ae;
+                            box-shadow: 0 0 8px rgba(0, 227, 174, 0.4);
+                        }
+                    }
+
+                    .input-group {
+                        transition: all 0.3s ease;
+
+                        input {
+                            border: 1px solid green;
+                            border-right: none;
+                            transition: all 0.3s ease;
+
+                            &:focus {
+                                box-shadow: none;
+                                border-color: green;
+                            }
+                        }
+
+                        .input-group-text {
+                            background-color: white;
+                            border: 1px solid green;
+                            border-left: none;
+                            color: #999;
+                            transition: all 0.3s ease;
+                            cursor: pointer;
+
+                            i {
+                                transition: transform 0.2s;
+                            }
+
+                            &:hover i {
+                                color: #00e3ae;
+                                transform: scale(1.2);
+                            }
+                        }
+
+                        &:focus-within {
+
+                            input,
+                            .input-group-text {
+                                border-color: #00e3ae;
+                                box-shadow: 0 0 10px rgba(0, 227, 174, 0.3);
+                            }
+
+                            .input-group-text {
+                                color: #00e3ae;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .login-right {
+                background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+
+                &:hover {
+                    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+                }
+            }
+        }
     }
+
 }
+
 
 /* laptop */
 @media screen and (min-width: 741px) {
