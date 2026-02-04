@@ -3,13 +3,14 @@ async function getFoods() {
     const listFood = document.querySelector(".food");
     listFood.innerHTML = "";
     
-    data.forEach(s => {
+    data.forEach((s,index) => {
         const item = document.createElement("div");
         item.classList.add("col");
         item.innerHTML = `
                         <div class="card ">
                             <div class="monAn ">
-                                <p class="doimau">${s.id}</p>
+                                <p >${index + 1}</p>
+                                <input class="doimau d-none" type="text" value="${s.id}" >
                                 <h5  class="card-title text-center">${s.name}</h5>
                                 <div class="icon">
                                     <button onClick="getIdFood('${s.id}')"> <i class="fa-solid fa-pen-to-square fs-5"  data-bs-toggle="modal" data-bs-target="#modalAddCart"></i></button>
@@ -51,14 +52,14 @@ order.addEventListener("click", async () => {
     const billOld = dataAOrder.find(s => s.id == chonBan.value);
     const bill = billOld ? billOld.bill : [];
     if (!chonBan.value) {
-        alert("vui long chon ban");
+        alert("Vui lòng chọn bàn!");
         return;
     }
 
     const listFood = document.querySelectorAll(".food .col");
     listFood.forEach((s) => {
         const soLuong = s.querySelector(".quantity");
-        const idFood = s.querySelector(".doimau").innerText;
+        const idFood = s.querySelector(".doimau").value;
         const quantityValue = parseInt(soLuong.value) || 0;
         if (quantityValue > 0) {
             const indexFood = bill.findIndex(s => s.idFood == idFood);
@@ -74,7 +75,7 @@ order.addEventListener("click", async () => {
         }
     })
     if (!bill.length) {
-        alert("vui long chon mon");
+        alert("Vui lòng chọn món!");
         return;
     }
     const newOrder = {
@@ -101,11 +102,11 @@ addFood.addEventListener("click", async () => {
     const foodName = document.getElementById("foodName");
     const price = document.getElementById("price");
     if (!foodName.value || !price.value) {
-        alert("vui long nhap du thong tin");
+        alert("Vui lòng nhập đủ thông tin!");
         return;
     }
     if (!selectedFoodImageFile && !idEdit) { 
-        alert("vui long chon anh");
+        alert("Vui lòng chọn ảnh!");
         return;
     }
 
@@ -134,7 +135,7 @@ addFood.addEventListener("click", async () => {
         }
 
         const newFood = {
-            id: idEdit ? idEdit : id,
+            id: idEdit ? JSON.stringify(idEdit) : JSON.stringify(id),
             name: foodName.value,
             imgUrl: imgUrl,
             price: parseInt(price.value)
@@ -146,6 +147,7 @@ addFood.addEventListener("click", async () => {
         }
         
         await getFoods(); 
+       
 
     } catch (error) {
         console.error(error);

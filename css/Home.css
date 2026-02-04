@@ -228,10 +228,10 @@ body {
         }
 
         .order {
-            .xe {
+            /* .xe {
                 background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 
-            }
+            } */
 
             .quantity {
                 background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
@@ -328,10 +328,11 @@ body {
 
         .food {
             img {
-                width: 250px;
+                /* width: 250px; */
                 margin: auto;
                 padding-top: 10px;
-                height: 200px;
+                height: 150px;
+                padding: 5px;
             }
 
             .monAn {

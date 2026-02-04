@@ -135,29 +135,25 @@
       "price": 3
     },
     {
-      "id": "11",
-      "name": "Hot Pot",
-      "imgUrl": "../img/hotPot.png",
-      "price": 43
-    },
-    {
       "id": "12",
       "name": "Shrimp",
       "imgUrl": "../img/tom.png",
       "price": 354
-    },
-    {
-      "id": "13",
-      "name": "dfgbn",
-      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770131191/dqw1ebjqvkc4vrsil5du.png",
-      "price": 344
-    },
-    {
-      "id": "14",
-      "name": "CANH TOM",
-      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770131215/t0rxpp7taftqpgci56cf.png",
-      "price": 54
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "id": "2",
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 3
+        },
+        {
+          "idFood": "2",
+          "quantity": 1
+        }
+      ]
+    }
+  ]
 }

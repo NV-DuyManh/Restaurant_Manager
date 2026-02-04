@@ -1,6 +1,6 @@
 async function getTable() {
     const data = await getData(URL_TABLE);
-    const listTable = document.querySelector(".table");
+    const listTable = document.querySelector(".tables");
     // kiem thung chua select 
     const choose = document.getElementById("choose");
     data.forEach(s => {
