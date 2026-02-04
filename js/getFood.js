@@ -1,9 +1,9 @@
-async function getFoods() {
+async function getFoods(search) {
     const data = await getData(URL_FOOD);
     const listFood = document.querySelector(".food");
     listFood.innerHTML = "";
-    
-    data.forEach((s,index) => {
+   const dataFilter = data.filter(s => s.name.toLowerCase().includes(search.toLowerCase()))
+    dataFilter.forEach((s,index) => {
         const item = document.createElement("div");
         item.classList.add("col");
         item.innerHTML = `
@@ -43,7 +43,7 @@ async function getFoods() {
         })
     });
 }
-getFoods();
+getFoods("");
 
 const order = document.getElementById("order");
 order.addEventListener("click", async () => {
@@ -209,3 +209,10 @@ async function xoafood(id) {
         await getFoods();
     }
 }
+
+const submit = document.getElementById("submit");
+submit.addEventListener("click", () =>{
+    const search = document.getElementById("search");
+       getFoods(search.value);
+    
+})

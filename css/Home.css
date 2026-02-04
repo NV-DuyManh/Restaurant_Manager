@@ -23,14 +23,31 @@ h6 {
     margin: 0;
 }
 
+:root {
+    --bg-btn: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+}
+
 hr {
     width: 100%;
     opacity: 1;
 }
 
-th {
-    color: red !important;
-    background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+.cartt {
+    th {
+        background: none;
+        color: red;
+    }
+
+}
+
+.anhTable {
+    width: 50px;
+}
+
+
+
+.bg-yg {
+    background-image: var(--bg-btn);
 }
 
 .box {
