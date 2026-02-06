@@ -75,12 +75,12 @@ async function getIdCart(id) {
     cartShow.innerHTML = "";
     totalElement.innerText = "";
     let total = 0;
-    order.bill.forEach(s => {
+    order.bill.forEach((s,index) => {
 
         const food = dataFood.find(f => f.id == s.idFood);
         total += s.quantity * food.price;
         cartShow.innerHTML += `   <tr class="text-center align-middle">
-                                <td class="fw-bold">1</td>
+                                <td class="fw-bold">${index + 1 }</td>
                                 <td class="anhTable"><img src="${food.imgUrl}" alt=""></td>
                                 <td>${food.name}</td>
                                 <td>${food.price} $</td>
