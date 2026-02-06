@@ -2,21 +2,21 @@
   "tables": [
     {
       "id": "1",
-      "nameCustomer": "",
-      "quantity": "0",
-      "status": true
+      "nameCustomer": "manh",
+      "quantity": "4",
+      "status": false
     },
     {
       "id": "2",
-      "nameCustomer": "Hung",
-      "quantity": 3,
+      "nameCustomer": "Duy Mạnh",
+      "quantity": "2",
       "status": false
     },
     {
       "id": "3",
-      "nameCustomer": "Son",
-      "quantity": 2,
-      "status": false
+      "nameCustomer": "",
+      "quantity": 0,
+      "status": true
     },
     {
       "id": "4",
@@ -147,9 +147,11 @@
       "price": 354
     }
   ],
-  "orders": [
+  "orders": [],
+  "bills": [
     {
-      "id": "2",
+      "id": "d33b",
+      "idTable": 2,
       "bill": [
         {
           "idFood": "1",
@@ -159,7 +161,25 @@
           "idFood": "2",
           "quantity": 1
         }
-      ]
+      ],
+      "total": 145,
+      "createAt": "2026-02-06T03:55:22.561Z"
+    },
+    {
+      "id": "9023",
+      "idTable": 3,
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 4
+        },
+        {
+          "idFood": "2",
+          "quantity": 4
+        }
+      ],
+      "total": 220,
+      "createAt": "2026-02-06T04:05:39.767Z"
     }
   ]
 }
