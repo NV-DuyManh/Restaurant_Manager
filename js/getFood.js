@@ -21,14 +21,15 @@ async function getFoods(search) {
                             <img src="${s.imgUrl}" class="card-img-top" alt="...">
                             <h4 class="text-center mt-3 text-danger fw-bold mt-4">${s.price} USD</h4>
                             <div class="card-body editQuantity d-flex gap-3  justify-content-center align-items-center">
-                                <button id="tru"><i class="fa-solid fa-minus"></i></button>
+                                <button class="btn_Tru" id="tru"><i class="fa-solid fa-minus"></i></button>
                                 <input type="number" value="0" class="quantity" >
-                                <button id="cong"><i class="fa-solid fa-plus"></i></button>
+                                <button  class="btn_Cong" id="cong"><i class="fa-solid fa-plus"></i></button>
                             </div>
                         </div>`;
         listFood.appendChild(item);
-        const tru = item.querySelector(".fa-minus");
-        const cong = item.querySelector(".fa-plus");
+        const tru = item.querySelector(".btn_Tru");
+        // const tru = item.getElementById("cong");
+        const cong = item.querySelector(".btn_Cong");
         const soLuong = item.querySelector(".quantity");
         tru.addEventListener("click", (s) => {
             const slHienTai = parseInt(soLuong.value) || 0;
