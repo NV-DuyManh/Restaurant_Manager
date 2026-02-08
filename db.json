@@ -14,9 +14,9 @@
     },
     {
       "id": "3",
-      "nameCustomer": "",
-      "quantity": 0,
-      "status": true
+      "nameCustomer": "234567",
+      "quantity": "324",
+      "status": false
     },
     {
       "id": "4",
@@ -145,6 +145,36 @@
       "name": "Shrimp",
       "imgUrl": "../img/tom.png",
       "price": 354
+    },
+    {
+      "id": "13",
+      "name": "CANH TOM",
+      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770556824/yjb7iwbdsvuayhugcptu.png",
+      "price": 34
+    },
+    {
+      "id": "14",
+      "name": "bdfbdfb",
+      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770556861/snrvubgwqtn2giaclipm.png",
+      "price": 443
+    },
+    {
+      "id": "15",
+      "name": "mì",
+      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770556931/gztxi1fxrvaj0r7rvldw.png",
+      "price": 34
+    },
+    {
+      "id": "16",
+      "name": "bdfbdfb",
+      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770556959/li9mrys5w6zjrg5l5hmp.png",
+      "price": 435
+    },
+    {
+      "id": "17",
+      "name": "ịijhnb",
+      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770557118/lupowx4drfealehrefld.png",
+      "price": 4
     }
   ],
   "orders": [],

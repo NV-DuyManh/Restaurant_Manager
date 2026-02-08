@@ -471,6 +471,7 @@ body {
                     }
 
                     -moz-appearance: textfield;
+                    appearance: textfield;
                 }
             }
         }
@@ -690,10 +691,11 @@ body {
     /* Màu nền đen mờ */
     background: rgba(0, 0, 0, 0.6);
     /* Hiệu ứng làm mờ hậu cảnh (Glassmorphism) */
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    /* Đặt webkit trước */
+    backdrop-filter: blur(10px);
+    /* Đặt chuẩn sau */
     z-index: 9999;
-    /* Đảm bảo nằm trên cùng, đè lên cả Modal */
 
     /* Căn giữa spinner */
     display: flex;
@@ -715,10 +717,23 @@ body {
         i {
             font-size: 60px;
             /* Kích thước lớn */
+
             /* Màu Gradient cho đẹp */
             background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+
+            /* --- KHU VỰC ĐÃ FIX LỖI VÀNG --- */
+
+            /* 1. Fix lỗi background-clip */
             -webkit-background-clip: text;
+            background-clip: text;
+            /* Thêm dòng chuẩn này để VS Code hết báo thiếu */
+
+            /* 2. Fix lỗi text-fill-color */
             -webkit-text-fill-color: transparent;
+            color: transparent;
+            /* Thêm dòng chuẩn này làm fallback */
+
+            /* ------------------------------- */
 
             /* Hiệu ứng xoay vô tận */
             animation: spinLoading 1s linear infinite;

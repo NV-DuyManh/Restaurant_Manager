@@ -152,7 +152,6 @@ addFood.addEventListener("click", async () => {
 
     } catch (error) {
         console.error(error);
-        alert("Có lỗi xảy ra");
     } finally {
         loadingOverlay.classList.remove("active");
         addFood.disabled = false;
