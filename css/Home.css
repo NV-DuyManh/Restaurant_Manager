@@ -20,6 +20,8 @@ h6 {
     margin: 0;
 }
 
+
+
 .img_pay {
     width: 30px;
 }
@@ -409,9 +411,11 @@ body {
                         height: 30px;
                         border-radius: 50%;
                         background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+                        transition: transform 0.3s ease;
 
                         &:hover {
                             background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+                            transform: scale(1.2);
                         }
                     }
 
@@ -428,6 +432,7 @@ body {
 
                         &:hover {
                             color: yellow;
+
                         }
                     }
                 }
