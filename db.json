@@ -175,9 +175,33 @@
       "name": "ịijhnb",
       "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770557118/lupowx4drfealehrefld.png",
       "price": 4
+    },
+    {
+      "id": "18",
+      "name": "CANH TOM",
+      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770737572/vbdsbqrapiprij4jtlrb.png",
+      "price": 34
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "id": "2",
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 2
+        },
+        {
+          "idFood": "2",
+          "quantity": 2
+        },
+        {
+          "idFood": "14",
+          "quantity": 1
+        }
+      ]
+    }
+  ],
   "bills": [
     {
       "id": "d33b",
