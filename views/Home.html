@@ -14,6 +14,7 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -81,40 +82,87 @@
         <!-- Giao diện dashBoard -->
         <div class="box dashBoard pb-4">
             <div class="container pt-4">
-                <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-3">
+                <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-1 g-3 ban">
                     <div class="col">
-                        <div class="card">
+                        <div class="card tongBan">
                             <div class="card-body text-center">
                                 <i class="fa-solid fa-chair"></i>
-                                <p class="card-text">Tổng số bàn </p>
-                                <h1 class="card-title">12</h1>
-                            </div>
-                        </div>
-                    </div> <div class="col">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-chair"></i>
-                                <p class="card-text">Tổng số bàn </p>
-                                <h1 class="card-title">12</h1>
-                            </div>
-                        </div>
-                    </div> <div class="col">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-chair"></i>
-                                <p class="card-text">Tổng số bàn </p>
-                                <h1 class="card-title">12</h1>
-                            </div>
-                        </div>
-                    </div> <div class="col">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <i class="fa-solid fa-chair"></i>
-                                <p class="card-text">Tổng số bàn </p>
+                                <p class="card-text">Tổng số bàn</p>
                                 <h1 class="card-title">12</h1>
                             </div>
                         </div>
                     </div>
+                    <div class="col">
+                        <div class="card banTiepKhach">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-utensils"></i>
+                                <p class="card-text">Bàn sẵn sàng tiếp khách</p>
+                                <h1 class="card-title">8</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card donchuaTT">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-money-check-dollar"></i>
+                                <p class="card-text">Đơn chưa thanh toán</p>
+                                <h1 class="card-title">3</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card doanhThu">
+                            <div class="card-body text-center">
+                                <i class="fa-solid fa-coins"></i>
+                                <p class="card-text">Doanh thu hôm nay</p>
+                                <h1 class="card-title">1000$</h1>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-1 g-3 mt-2 doanhtthu">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p class="card-text"></p>
+                                <h2 class="card-title">Tổng doanh thu</h2>
+                                <h1 class="card-title ">3000</h1>
+                                <p>USD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p class="card-text"></p>
+                                <h2 class="card-title">Số đơn hàng</h2>
+                                <h1 class="card-title">9</h1>
+                                <p>Đơn</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p class="card-text"></p>
+                                <h2 class="card-title">Món ăn phổ biến</h2>
+                                <h1 class="card-title">Fried Rice</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p class="card-text"></p>
+                                <h2 class="card-title">Khách hàng thường xuyên</h2>
+                                <h1 class="card-title">Duy Manh</h1>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -305,14 +353,14 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Vòng xoay chờ đợi -->
     <div id="loading-overlay">
         <div class="spinner-container">
             <i class="fa-solid fa-spinner"></i>
         </div>
     </div>
-    
+
     <!-- Modal xoa san pham -->
     <div class="modal fade" id="modaldelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
