@@ -200,6 +200,23 @@
           "quantity": 1
         }
       ]
+    },
+    {
+      "id": "3",
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 1
+        },
+        {
+          "idFood": "2",
+          "quantity": 1
+        },
+        {
+          "idFood": "11",
+          "quantity": 1
+        }
+      ]
     }
   ],
   "bills": [
