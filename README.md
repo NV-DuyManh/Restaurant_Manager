@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="[https://media.giphy.com/media/l2Je2skI6CVnZ0Sju/giphy.gif](https://media.giphy.com/media/l2Je2skI6CVnZ0Sju/giphy.gif)" width="100px">
+  <img src="https://media.giphy.com/media/l2Je2skI6CVnZ0Sju/giphy.gif" width="100px">
 
   # 🍽️ Restaurant Manager System 🍷
   
@@ -71,15 +71,17 @@ Dự án được xây dựng dựa trên các công nghệ mạnh mẽ:
   <img src="LINK_ANH_REPORT_CUA_BAN" width="80%" alt="Report Screen">
 </div>
 
+---
+
 ## 💻 Cài Đặt & Hướng Dẫn
 
 Để chạy dự án này trên máy local của bạn, hãy làm theo các bước sau:
-**Bước 1: Clone dự án**
 
+### **Bước 1: Clone dự án**
+Mở terminal và chạy lệnh sau:
 ```bash
 git clone [https://github.com/NV-DuyManh/Restaurant_Manager.git](https://github.com/NV-DuyManh/Restaurant_Manager.git)
 Bước 2: Cấu hình Cơ sở dữ liệu
-
 Mở file database/script.sql (hoặc tên file sql của bạn).
 
 Import vào MySQL hoặc SQL Server.
@@ -87,7 +89,6 @@ Import vào MySQL hoặc SQL Server.
 Cập nhật thông tin kết nối trong file cấu hình config.properties (hoặc nơi bạn lưu config DB).
 
 Bước 3: Chạy ứng dụng
-
 Mở dự án bằng IDE (IntelliJ / Visual Studio / NetBeans).
 
 Build và Run! 🎉
