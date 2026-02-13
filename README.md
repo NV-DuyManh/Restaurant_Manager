@@ -51,25 +51,6 @@ Dự án được xây dựng dựa trên các công nghệ mạnh mẽ:
 
 </div>
 
-## 📸 Hình Ảnh Demo
-
-> *Một bức ảnh hơn ngàn lời nói. Dưới đây là một số hình ảnh thực tế của phần mềm.*
-
-### 1. Giao diện Đăng nhập & Trang chủ
-<div align="center">
-  <img src="LINK_ANH_LOGIN_CUA_BAN" width="45%" style="margin-right: 10px;" alt="Login Screen">
-  <img src="LINK_ANH_DASHBOARD_CUA_BAN" width="45%" alt="Dashboard Screen">
-</div>
-
-### 2. Quản lý Đặt món & Sơ đồ bàn
-<div align="center">
-  <img src="LINK_ANH_ORDER_CUA_BAN" width="80%" alt="Order Screen">
-</div>
-
-### 3. Báo cáo Doanh thu
-<div align="center">
-  <img src="LINK_ANH_REPORT_CUA_BAN" width="80%" alt="Report Screen">
-</div>
 
 ---
 
