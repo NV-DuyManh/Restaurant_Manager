@@ -77,49 +77,94 @@ Dự án được xây dựng dựa trên các công nghệ mạnh mẽ:
 
 Để chạy dự án này trên máy local của bạn, hãy làm theo các bước sau:
 
+---
+
 ### **Bước 1: Clone dự án**
+
 Mở terminal và chạy lệnh sau:
+
 ```bash
-git clone [https://github.com/NV-DuyManh/Restaurant_Manager.git](https://github.com/NV-DuyManh/Restaurant_Manager.git)
-Bước 2: Cấu hình Cơ sở dữ liệu
-Mở file database/script.sql (hoặc tên file sql của bạn).
+git clone https://github.com/NV-DuyManh/Restaurant_Manager.git
+```
 
-Import vào MySQL hoặc SQL Server.
+---
 
-Cập nhật thông tin kết nối trong file cấu hình config.properties (hoặc nơi bạn lưu config DB).
+### **Bước 2: Cấu hình Cơ sở dữ liệu**
 
-Bước 3: Chạy ứng dụng
-Mở dự án bằng IDE (IntelliJ / Visual Studio / NetBeans).
+1. Mở file:
 
-Build và Run! 🎉
+```
+database/script.sql
+```
 
-🤝 Đóng Góp (Contributing)
+2. Import file này vào:
+
+- MySQL  
+- Hoặc SQL Server  
+
+3. Cập nhật thông tin kết nối Database trong file cấu hình:
+
+```
+config.properties
+```
+
+(hoặc file cấu hình nơi bạn lưu thông tin DB)
+
+---
+
+### **Bước 3: Chạy ứng dụng**
+
+1. Mở dự án bằng IDE:
+
+- IntelliJ  
+- Visual Studio  
+- NetBeans  
+
+2. Build project.
+
+3. Run ứng dụng 🎉
+
+---
+
+## 🤝 Đóng Góp (Contributing)
+
 Mọi sự đóng góp đều được hoan nghênh! Nếu bạn muốn cải thiện dự án này:
 
-Fork dự án.
+### 1️⃣ Fork dự án
 
-Tạo branch mới:
+### 2️⃣ Tạo branch mới
 
-Bash
+```bash
 git checkout -b feature/TinhNangMoi
-Commit thay đổi:
+```
 
-Bash
-git commit -m 'Thêm tính năng X'
-Push lên branch:
+### 3️⃣ Commit thay đổi
 
-Bash
+```bash
+git commit -m "Thêm tính năng X"
+```
+
+### 4️⃣ Push lên branch
+
+```bash
 git push origin feature/TinhNangMoi
-Tạo Pull Request.
+```
 
-👨‍💻 Tác Giả
-Nguyễn Văn Duy Mạnh
+### 5️⃣ Tạo Pull Request
 
-🔗 Github: @NV-DuyManh
+---
 
-📧 Email: (Email của bạn)
+## 👨‍💻 Tác Giả
+
+Nguyễn Văn Duy Mạnh  
+
+🔗 Github: @NV-DuyManh  
+
+📧 Email: (Email của bạn)  
 
 📘 Facebook: (Link Facebook của bạn)
+
+---
 
 <div align="center">
 <i>Cảm ơn bạn đã ghé thăm dự án! Nếu thấy hữu ích, hãy tặng mình 1 ⭐ nhé!</i> ❤️
