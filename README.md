@@ -76,7 +76,7 @@ Dự án được xây dựng dựa trên các công nghệ mạnh mẽ:
 Để chạy dự án này trên máy local của bạn, hãy làm theo các bước sau:
 
 **Bước 1: Clone dự án**
-```bash
+
 git clone [https://github.com/NV-DuyManh/Restaurant_Manager.git](https://github.com/NV-DuyManh/Restaurant_Manager.git)
 **Bước 2: Cấu hình Cơ sở dữ liệu**
 
