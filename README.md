@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://media.giphy.com/media/l2Je2skI6CVnZ0Sju/giphy.gif" width="100px">
+  <img src="[https://media.giphy.com/media/l2Je2skI6CVnZ0Sju/giphy.gif](https://media.giphy.com/media/l2Je2skI6CVnZ0Sju/giphy.gif)" width="100px">
 
   # 🍽️ Restaurant Manager System 🍷
   
@@ -74,15 +74,15 @@ Dự án được xây dựng dựa trên các công nghệ mạnh mẽ:
 ## 💻 Cài Đặt & Hướng Dẫn
 
 Để chạy dự án này trên máy local của bạn, hãy làm theo các bước sau:
-
 **Bước 1: Clone dự án**
 
+```bash
 git clone [https://github.com/NV-DuyManh/Restaurant_Manager.git](https://github.com/NV-DuyManh/Restaurant_Manager.git)
-**Bước 2: Cấu hình Cơ sở dữ liệu**
+Bước 2: Cấu hình Cơ sở dữ liệu
 
 Mở file database/script.sql (hoặc tên file sql của bạn).
 
-Import vào MySQL/SQL Server.
+Import vào MySQL hoặc SQL Server.
 
 Cập nhật thông tin kết nối trong file cấu hình config.properties (hoặc nơi bạn lưu config DB).
 
@@ -97,12 +97,18 @@ Mọi sự đóng góp đều được hoan nghênh! Nếu bạn muốn cải th
 
 Fork dự án.
 
-Tạo branch mới (git checkout -b feature/TinhNangMoi).
+Tạo branch mới:
 
-Commit thay đổi (git commit -m 'Thêm tính năng X').
+Bash
+git checkout -b feature/TinhNangMoi
+Commit thay đổi:
 
-Push lên branch (git push origin feature/TinhNangMoi).
+Bash
+git commit -m 'Thêm tính năng X'
+Push lên branch:
 
+Bash
+git push origin feature/TinhNangMoi
 Tạo Pull Request.
 
 👨‍💻 Tác Giả
