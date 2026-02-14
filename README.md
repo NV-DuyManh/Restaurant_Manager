@@ -72,21 +72,10 @@ git clone https://github.com/NV-DuyManh/Restaurant_Manager.git
 
 ### **Bước 2: Cấu hình Cơ sở dữ liệu**
 
-1. Mở file:
+Mở terminal và chạy lệnh sau
 
-```
-database/script.sql
-```
-
-2. Import file này vào:
-
-- MySQL  
-- Hoặc SQL Server  
-
-3. Cập nhật thông tin kết nối Database trong file cấu hình:
-
-```
-config.properties
+```bash
+npx json-server db.json
 ```
 
 (hoặc file cấu hình nơi bạn lưu thông tin DB)
@@ -95,15 +84,10 @@ config.properties
 
 ### **Bước 3: Chạy ứng dụng**
 
-1. Mở dự án bằng IDE:
+Truy cập vào thư mục chính:
 
-- IntelliJ  
-- Visual Studio  
-- NetBeans  
+- views -> Home.html -> Open with Live Server 
 
-2. Build project.
-
-3. Run ứng dụng 🎉
 
 ---
 
@@ -141,9 +125,9 @@ Nguyễn Văn Duy Mạnh
 
 🔗 Github: @NV-DuyManh  
 
-📧 Email: (Email của bạn)  
+📧 Email: duymanhdev@gmal.com 
 
-📘 Facebook: (Link Facebook của bạn)
+📘 Facebook: https://www.facebook.com/duymanhdev
 
 ---
 
