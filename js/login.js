@@ -13,17 +13,16 @@ function toggleLoginPassword() {
     }
 }
 
-const dangNhap = document.getElementById("dangNhap");
 dangNhap.addEventListener("click", async () => {
-
-    const email = document.getElementById("emailLogin").value;
-    const password = document.getElementById("passwordLogin").value;
-    const data =  await getData(URL_PROFILE);
-
-    if(email != data.email || password != data.pass) {
-        alert("email hoac mat khau khong khop !!!");
+    const taiKhoan = document.getElementById("emailLogin").value.trim(); 
+    const password = document.getElementById("passwordLogin").value.trim();
+    const data = await getData(URL_PROFILE);
+    const checkTK = data.find(user => user.userName === taiKhoan && user.pass === password);
+    if (!checkTK) {
+        alert("Tên đăng nhập hoặc mật khẩu không đúng !!!");
         return;
     }
+
     location.href = "Home.html";
-})
+});
 
