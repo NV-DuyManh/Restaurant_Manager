@@ -345,17 +345,17 @@
       "createAt": "2026-02-13T14:31:50.284Z"
     }
   ],
-"profile": [
+  "profile": [
     {
-      "userName": "dm@gmail.com",
+      "userName": "dm",
       "pass": "123"
     },
     {
-      "userName": "manh@gmail.com",
+      "userName": "manh",
       "pass": "123"
     },
     {
-      "userName": "admin@gmail.com",
+      "userName": "admin",
       "pass": "123"
     }
   ]
