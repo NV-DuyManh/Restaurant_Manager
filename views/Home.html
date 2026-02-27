@@ -92,7 +92,7 @@
                             <div class="card-body text-center">
                                 <i class="fa-solid fa-chair"></i>
                                 <p class="card-text">Tổng số bàn</p>
-                                <h1 class="card-title">12</h1>
+                                <h1 id="tongBan" class="card-title"></h1>
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                             <div class="card-body text-center">
                                 <i class="fa-solid fa-utensils"></i>
                                 <p class="card-text">Bàn sẵn sàng tiếp khách</p>
-                                <h1 class="card-title">8</h1>
+                                <h1 id="banTrong" class="card-title"></h1>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                             <div class="card-body text-center">
                                 <i class="fa-solid fa-money-check-dollar"></i>
                                 <p class="card-text">Đơn chưa thanh toán</p>
-                                <h1 class="card-title">3</h1>
+                                <h1 id="donchuaTT" class="card-title">3</h1>
                             </div>
                         </div>
                     </div>
@@ -168,9 +168,13 @@
 
 
                 </div>
+                <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 g-3 mt-5">
+                    <div class="col" id="barChart"></div>
+                    <div class="col" id="pieChart"></div>
+                    <div class="col" id="polarChart"></div>
+                </div>
             </div>
         </div>
-
         <!-- Giao diện Reservation -->
         <div class="box dat_ban pb-4">
             <div class="container order pt-4">
@@ -276,7 +280,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 
     </div>
 
@@ -424,12 +428,14 @@
             </div>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/api.js"></script>
     <script src="../js/configCloundianary.js"></script>
+    <script src="../js/dashboard.js"></script>
     <script src="../js/getTable.js"></script>
     <script src="../js/getFood.js"></script>
     <script src="../js/paybill.js"></script>
+    <script src="../js/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -454,7 +460,7 @@
         }
     </script>
     <script src="../js/home.js"></script>
-    <script src="../js/logout.js"></script>z
+    <script src="../js/logout.js"></script>
 
 </body>
 
