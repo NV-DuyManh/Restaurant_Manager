@@ -14,9 +14,9 @@
     },
     {
       "id": "3",
-      "nameCustomer": "",
-      "quantity": 0,
-      "status": true
+      "nameCustomer": "manh",
+      "quantity": "10",
+      "status": false
     },
     {
       "id": "4",
@@ -151,12 +151,6 @@
       "name": "CANH TOM",
       "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1770556824/yjb7iwbdsvuayhugcptu.png",
       "price": 34
-    },
-    {
-      "id": "14",
-      "name": "Mì",
-      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1772171637/qjdiwftghztlytg3e7b7.png",
-      "price": 100
     }
   ],
   "orders": [
@@ -169,7 +163,7 @@
         },
         {
           "idFood": "2",
-          "quantity": 1
+          "quantity": 4
         },
         {
           "idFood": "10",
@@ -473,5 +467,6 @@
       "pass": "123",
       "id": "0454"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
