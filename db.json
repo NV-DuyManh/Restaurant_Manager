@@ -2,15 +2,15 @@
   "tables": [
     {
       "id": "1",
-      "nameCustomer": "manh",
-      "quantity": "10",
-      "status": false
+      "nameCustomer": "",
+      "quantity": 0,
+      "status": true
     },
     {
       "id": "2",
-      "nameCustomer": "Duy Mạnh",
-      "quantity": "12",
-      "status": false
+      "nameCustomer": "",
+      "quantity": 0,
+      "status": true
     },
     {
       "id": "3",
@@ -77,8 +77,8 @@
     {
       "id": "1",
       "name": "Soup",
-      "imgUrl": "../img/bread-soup.png",
-      "price": 45
+      "imgUrl": "https://res.cloudinary.com/duuujvsz7/image/upload/v1772766798/oftevkmkr0aupi2l6pqi.png",
+      "price": 50
     },
     {
       "id": "2",
@@ -153,93 +153,10 @@
       "price": 34
     }
   ],
-  "orders": [
-    {
-      "id": "2",
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 7
-        },
-        {
-          "idFood": "2",
-          "quantity": 4
-        },
-        {
-          "idFood": "10",
-          "quantity": 1
-        },
-        {
-          "idFood": "11",
-          "quantity": 3
-        },
-        {
-          "idFood": "14",
-          "quantity": 1
-        },
-        {
-          "idFood": "15",
-          "quantity": 2
-        },
-        {
-          "idFood": "3",
-          "quantity": 123
-        }
-      ]
-    }
-  ],
   "bills": [
     {
-      "id": "8863",
-      "idTable": 2,
-      "bill": [
-        {
-          "idFood": "2",
-          "quantity": 2
-        },
-        {
-          "idFood": "3",
-          "quantity": 6
-        },
-        {
-          "idFood": "4",
-          "quantity": 10
-        },
-        {
-          "idFood": "7",
-          "quantity": 5
-        }
-      ],
-      "total": 726,
-      "createAt": "2026-02-07T02:21:07.297Z"
-    },
-    {
-      "id": "a011",
-      "idTable": 10,
-      "bill": [
-        {
-          "idFood": "6",
-          "quantity": 1
-        },
-        {
-          "idFood": "7",
-          "quantity": 2
-        },
-        {
-          "idFood": "8",
-          "quantity": 2
-        },
-        {
-          "idFood": "11",
-          "quantity": 1
-        }
-      ],
-      "total": 247,
-      "createAt": "2026-02-07T02:21:40.957Z"
-    },
-    {
-      "id": "d4c8",
-      "idTable": 4,
+      "id": "2257",
+      "idTable": 1,
       "bill": [
         {
           "idFood": "1",
@@ -247,203 +164,50 @@
         },
         {
           "idFood": "2",
-          "quantity": 1
+          "quantity": 2
         },
         {
           "idFood": "3",
           "quantity": 1
         },
         {
-          "idFood": "4",
-          "quantity": 1
+          "idFood": "10",
+          "quantity": 2
         },
         {
-          "idFood": "5",
+          "idFood": "11",
           "quantity": 1
+        }
+      ],
+      "total": 97,
+      "createAt": "2026-03-06T12:22:50.872Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "3",
+      "bill": [
+        {
+          "idFood": "1",
+          "quantity": 2
+        },
+        {
+          "idFood": "2",
+          "quantity": 2
+        },
+        {
+          "idFood": "3",
+          "quantity": 2
         },
         {
           "idFood": "6",
-          "quantity": 1
-        },
-        {
-          "idFood": "7",
           "quantity": 1
         },
         {
           "idFood": "8",
-          "quantity": 2
-        },
-        {
-          "idFood": "9",
-          "quantity": 1
-        },
-        {
-          "idFood": "10",
-          "quantity": 1
-        },
-        {
-          "idFood": "11",
-          "quantity": 1
-        },
-        {
-          "idFood": "12",
           "quantity": 1
         }
-      ],
-      "total": 654,
-      "createAt": "2026-02-07T02:50:36.528Z"
-    },
-    {
-      "id": "ca1e",
-      "idTable": 2,
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 2
-        },
-        {
-          "idFood": "2",
-          "quantity": 2
-        },
-        {
-          "idFood": "14",
-          "quantity": 1
-        }
-      ],
-      "total": 553,
-      "createAt": "2026-02-13T14:31:50.284Z"
-    },
-    {
-      "id": "2207",
-      "idTable": 3,
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 1
-        },
-        {
-          "idFood": "2",
-          "quantity": 1
-        },
-        {
-          "idFood": "11",
-          "quantity": 1
-        }
-      ],
-      "total": 70,
-      "createAt": "2026-02-16T15:58:46.604Z"
-    },
-    {
-      "id": "1e3a",
-      "idTable": 12,
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 1
-        },
-        {
-          "idFood": "2",
-          "quantity": 4
-        },
-        {
-          "idFood": "7",
-          "quantity": 1
-        },
-        {
-          "idFood": "11",
-          "quantity": 1
-        }
-      ],
-      "total": 198,
-      "createAt": "2026-02-16T15:59:27.448Z"
-    },
-    {
-      "id": "9233",
-      "idTable": 4,
-      "bill": [
-        {
-          "idFood": "2",
-          "quantity": 1
-        },
-        {
-          "idFood": "3",
-          "quantity": 2
-        },
-        {
-          "idFood": "6",
-          "quantity": 1
-        },
-        {
-          "idFood": "7",
-          "quantity": 2
-        },
-        {
-          "idFood": "11",
-          "quantity": 1
-        }
-      ],
-      "total": 247,
-      "createAt": "2026-02-20T14:27:59.557Z"
-    },
-    {
-      "id": "75ac",
-      "idTable": 8,
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 2
-        },
-        {
-          "idFood": "2",
-          "quantity": 4
-        },
-        {
-          "idFood": "3",
-          "quantity": 2
-        },
-        {
-          "idFood": "9",
-          "quantity": 2
-        },
-        {
-          "idFood": "10",
-          "quantity": 2
-        },
-        {
-          "idFood": "11",
-          "quantity": 2
-        },
-        {
-          "idFood": "15",
-          "quantity": 2
-        }
-      ],
-      "total": 280,
-      "createAt": "2026-02-27T05:47:04.248Z"
-    },
-    {
-      "id": "b769",
-      "idTable": 6,
-      "bill": [
-        {
-          "idFood": "1",
-          "quantity": 3
-        },
-        {
-          "idFood": "2",
-          "quantity": 3
-        },
-        {
-          "idFood": "10",
-          "quantity": 230
-        },
-        {
-          "idFood": "15",
-          "quantity": 100
-        }
-      ],
-      "total": 4255,
-      "createAt": "2026-02-27T05:52:13.930Z"
+      ]
     }
   ],
   "profile": [
