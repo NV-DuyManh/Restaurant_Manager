@@ -28,17 +28,6 @@ Chào mừng bạn đến với **Restaurant Manager**! 👋 Đây là dự án 
 
 Mục tiêu của dự án là tạo ra một giao diện thân thiện, dễ sử dụng nhưng vẫn đảm bảo đầy đủ các tính năng mạnh mẽ cho người quản lý.
 
-## 🚀 Tính Năng Nổi Bật
-
-| Chức năng | Mô tả chi tiết |
-| :--- | :--- |
-| 🏰 **Quản Lý Bàn** | Sơ đồ bàn trực quan, cập nhật trạng thái (Trống, Có khách, Đặt trước) theo thời gian thực. |
-| 🍲 **Gọi Món (Order)** | Menu điện tử đa dạng, hỗ trợ tìm kiếm món ăn nhanh chóng, thêm topping, ghi chú. |
-| 💳 **Thanh Toán** | Hỗ trợ in hóa đơn, tách/gộp bàn, tính toán thuế và giảm giá tự động. |
-| 🧑‍🍳 **Quản Lý Nhân Viên** | Phân quyền chi tiết (Admin, Thu ngân, Phục vụ), chấm công và tính lương. |
-| 📊 **Báo Cáo Thống Kê** | Biểu đồ doanh thu theo ngày/tháng/năm, món ăn bán chạy nhất (Best seller). |
-| 📦 **Quản Lý Kho** | Theo dõi nguyên liệu tồn kho, cảnh báo khi sắp hết hàng. |
-
 ## 🛠️ Công Nghệ Sử Dụng
 
 Dự án được xây dựng dựa trên các công nghệ mạnh mẽ:
