@@ -307,11 +307,12 @@
       ]
     },
     {
+      "id": "3PCVyw66kQU",
       "idTable": "1",
       "bill": [
         {
           "idFood": "2",
-          "quantity": 2
+          "quantity": 4
         },
         {
           "idFood": "3",
@@ -320,9 +321,24 @@
         {
           "idFood": "11",
           "quantity": 1
+        },
+        {
+          "idFood": "1",
+          "quantity": 2
+        },
+        {
+          "idFood": "4",
+          "quantity": 1
+        },
+        {
+          "idFood": "8",
+          "quantity": 1
+        },
+        {
+          "idFood": "12",
+          "quantity": 1
         }
-      ],
-      "id": "3PCVyw66kQU"
+      ]
     },
     {
       "idTable": "7",
