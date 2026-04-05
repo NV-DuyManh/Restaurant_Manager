@@ -2,124 +2,110 @@
 
   <img src="https://media.giphy.com/media/l2Je2skI6CVnZ0Sju/giphy.gif" width="100px">
 
-  # 🍽️ Restaurant Manager System 🍷
+  # 🍽️ Restaurant Manager System
   
-  **Hệ Thống Quản Lý Nhà Hàng Thông Minh - Hiện Đại - Tiện Lợi**
+  **Hệ thống quản lý nhà hàng đơn giản – trực quan – dễ triển khai**
 
   [![GitHub release](https://img.shields.io/github/release/NV-DuyManh/Restaurant_Manager.svg?style=flat-square)](https://github.com/NV-DuyManh/Restaurant_Manager/releases)
-  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square)](https://github.com/NV-DuyManh/Restaurant_Manager/graphs/commit-activity)
-  [![GitHub license](https://img.shields.io/github/license/NV-DuyManh/Restaurant_Manager.svg?style=flat-square)](https://github.com/NV-DuyManh/Restaurant_Manager/blob/master/LICENSE)
-  [![GitHub stars](https://img.shields.io/github/stars/NV-DuyManh/Restaurant_Manager.svg?style=social&label=Star)](https://github.com/NV-DuyManh/Restaurant_Manager)
-  
+  [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg?style=flat-square)](https://github.com/NV-DuyManh/Restaurant_Manager/graphs/commit-activity)
+  [![License](https://img.shields.io/github/license/NV-DuyManh/Restaurant_Manager.svg?style=flat-square)](https://github.com/NV-DuyManh/Restaurant_Manager/blob/master/LICENSE)
+
   <p>
     <a href="#-giới-thiệu">Giới thiệu</a> •
-    <a href="#-tính-năng-nổi-bật">Tính năng</a> •
-    <a href="#-hình-ảnh-demo">Hình ảnh</a> •
+    <a href="#-tính-năng">Tính năng</a> •
+    <a href="#-công-nghệ">Công nghệ</a> •
     <a href="#-cài-đặt">Cài đặt</a> •
-    <a href="#-liên-hệ">Liên hệ</a>
+    <a href="#-api">API</a> •
+    <a href="#-đóng-góp">Đóng góp</a>
   </p>
-</div>
-
----
-
-## 📖 Giới Thiệu
-
-Chào mừng bạn đến với **Restaurant Manager**! 👋 Đây là dự án phần mềm được thiết kế để tối ưu hóa quy trình vận hành của một nhà hàng, từ việc đặt bàn, gọi món cho đến quản lý nhân viên và báo cáo doanh thu.
-
-Mục tiêu của dự án là tạo ra một giao diện thân thiện, dễ sử dụng nhưng vẫn đảm bảo đầy đủ các tính năng mạnh mẽ cho người quản lý.
-
-## 🛠️ Công Nghệ Sử Dụng
-
-Dự án được xây dựng dựa trên các công nghệ mạnh mẽ:
-
-<div align="center">
-
-| Core | Database | Tools |
-| :---: | :---: | :---: |
-| ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white) <br/> *(Hoặc C#/Python)* | ![MySQL](https://img.shields.io/badge/MySQL-000000?style=for-the-badge&logo=mysql&logoColor=white) <br/> *(Hoặc SQL Server)* | ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white) <br/> ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white) |
 
 </div>
 
+---
+
+## 📖 Giới thiệu
+
+**Restaurant Manager System** là một ứng dụng web giúp quản lý hoạt động cơ bản của nhà hàng, bao gồm:
+
+- Quản lý món ăn  
+- Quản lý giỏ hàng (cart)  
+- Xử lý order  
+- Hiển thị danh sách sản phẩm  
+
+Dự án được xây dựng theo hướng:
+
+> ⚡ Frontend + Fake REST API (JSON Server)
+
+Phù hợp cho:
+- Học tập
+- Demo project
+- Nền tảng phát triển fullstack
 
 ---
 
-## 💻 Cài Đặt & Hướng Dẫn
+## 🚀 Tính năng
 
-Để chạy dự án này trên máy local của bạn, hãy làm theo các bước sau:
+- 🛒 Thêm / xóa sản phẩm vào giỏ hàng  
+- 🍔 Hiển thị danh sách món ăn từ database  
+- 🔄 Tự động cập nhật giao diện  
+- 📦 Fake API bằng json-server  
+- 💡 UI đơn giản, dễ dùng  
 
 ---
 
-### **Bước 1: Clone dự án**
+## 🛠️ Công nghệ
 
-Mở terminal và chạy lệnh sau:
+| Thành phần | Công nghệ |
+|----------|--------|
+| Frontend | HTML, CSS, JavaScript |
+| Backend (fake) | JSON Server |
+| Tools | Git, Live Server |
+
+---
+
+## 📁 Cấu trúc thư mục
+Restaurant_Manager/
+│── db.json
+│── index.html
+│── assets/
+│── css/
+│── js/
+│── views/
+│ └── Home.html
+
+
+---
+
+## ⚙️ Cài đặt
+
+### 1️⃣ Clone project
 
 ```bash
-git clone https://github.com/NV-DuyManh/Restaurant_Manager.git
+git clone https://github.com/NV-DuyManh/Restaurant_Manager.git 
+cd Restaurant_Manager
 ```
 
----
+### 2️⃣ Cài json-server
 
-### **Bước 2: Cấu hình Cơ sở dữ liệu**
+```bash
+npm install -g json-server
+```
 
-Mở terminal và chạy lệnh sau
+### 3️⃣ Chạy database
 
 ```bash
 npx json-server db.json
 ```
 
-(hoặc file cấu hình nơi bạn lưu thông tin DB)
-
----
-
-### **Bước 3: Chạy ứng dụng**
-
-Truy cập vào thư mục chính:
-
-- views -> Home.html -> Open with Live Server 
+             ➡️ Server chạy tại:   http://localhost:3000
 
 
----
+### 4️⃣ Chạy frontend
 
-## 🤝 Đóng Góp (Contributing)
+Mở file:
 
-Mọi sự đóng góp đều được hoan nghênh! Nếu bạn muốn cải thiện dự án này:
-
-### 1️⃣ Fork dự án
-
-### 2️⃣ Tạo branch mới
-
-```bash
-git checkout -b feature/TinhNangMoi
+```
+views/Home.html
 ```
 
-### 3️⃣ Commit thay đổi
-
-```bash
-git commit -m "Thêm tính năng X"
-```
-
-### 4️⃣ Push lên branch
-
-```bash
-git push origin feature/TinhNangMoi
-```
-
-### 5️⃣ Tạo Pull Request
-
----
-
-## 👨‍💻 Tác Giả
-
-Nguyễn Văn Duy Mạnh  
-
-🔗 Github: @NV-DuyManh  
-
-📧 Email: duymanhdev@gmal.com 
-
-📘 Facebook: https://www.facebook.com/duymanhdev
-
----
-
-<div align="center">
-<i>Cảm ơn bạn đã ghé thăm dự án! Nếu thấy hữu ích, hãy tặng mình 1 ⭐ nhé!</i> ❤️
-</div>
+Click chuột phải → **Open with Live Server**
